@@ -1,6 +1,31 @@
 # -*- mode: org -*-
 #+TITLE: 論語
 #+PROPERTY: ID KR1h0004
+
+* Data for the heatmap
+
+** First run:
+
+For all phrases in the Lunyu files 1 to 20, 
+  - remove punctuation
+  - if phrase is at least 4 characters,
+  - look them up in the index:
+    - we will use the first three characters to collect lines from the index
+    - for these lines, we will collect those that have at most one
+      character different in the whole phrase, so e.g.
+    - collect the locations and print them to the file along with the
+      phrase; these are in the files KR1h0004_001 to 020.
+  - Tabulate them for total count and by section in =phrases-heatmap.tab=
+  - Tabulate by text in =phrases-net.tab=
+
+** Second run: 4gram
+We now build ngrams of length 4 from the text (=ngram-4-list.tab=),
+but keep also the number of the phrase from the first run, so that we
+can compare and connect.
+  - The raw result is in ngram-4-results.tab
+
+
+
 * 論語 目次
 [[file:KR1h0004_001.txt][〈學而〉第一]]
 [[file:KR1h0004_002.txt][〈為政〉第二]]
